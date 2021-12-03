@@ -1,0 +1,29 @@
+<div style="justify-content: center;width: 100%;display: flex;font-size: large;">Structural Directives</div>
+<ul>
+    <li>ngIf</li>
+    <li>ngSwitch</li>
+    <li>ngFor</li>
+</ul>
+<p><b>>Undergoing ngIf statement</b></p>
+<div>ngIf with boolean expression<span *ngIf=true>am with boolean true</span></div>
+<div>ngIf with boolean variable <span *ngIf='directive; else elseBlock'>am boolean variable</span></div>
+<ng-template #elseBlock><span>am else statement</span></ng-template>
+<div *ngIf='directive; then thenBlock; else elseBlock2'></div>
+<ng-template #thenBlock >then block</ng-template>
+<ng-template #elseBlock2>else block</ng-template>
+<p><b>Undergoing ngSwitch statement</b></p>
+<div [ngSwitch]='case'>
+    <div *ngSwitchCase="'blue'">blue</div>
+    <div *ngSwitchCase="'red'">red</div>
+    <div *ngSwitchCase="'yellow'">yellow</div>
+    <div *ngSwitchDefault>hello am default</div>
+</div>
+<p><b>Undergoing ngFor statement</b></p>
+<div *ngFor ="let arr of array; index as i">
+    <h5>{{i}} - {{arr}}</h5>
+</div>
+<ul>
+    <li>Assigning item from the array with of syntax</li>
+    <li>denoting index as  <b>as</b> </li>
+    <li>can get out the first , last , odd & even of array </li>
+</ul>
