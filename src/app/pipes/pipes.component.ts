@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 
+
 @Component({
   selector: 'app-pipes',
   templateUrl: './pipes.component.html',
@@ -24,7 +25,8 @@ export class PipesComponent implements OnInit {
   constructor(private _employeeService: EmployeeService) { }
 
   ngOnInit(): void {
-    this.employees = this._employeeService.getEmployees()
+    this._employeeService.getEmployees()
+    .subscribe(data => this.employees = data)
   }
 
 }

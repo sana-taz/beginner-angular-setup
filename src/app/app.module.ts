@@ -17,6 +17,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { ComponentinterComponent } from './componentinter/componentinter.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeService } from './employee.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttprequestComponent } from './httprequest/httprequest.component'
 
 @NgModule({
   declarations: [
@@ -32,12 +34,14 @@ import { EmployeeService } from './employee.service';
     TwowayComponent,
     DirectivesComponent,
     ComponentinterComponent,
-    PipesComponent
+    PipesComponent,
+    HttprequestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
