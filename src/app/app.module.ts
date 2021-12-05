@@ -15,6 +15,8 @@ import { EventhandlingComponent } from './eventhandling/eventhandling.component'
 import { TwowayComponent } from './twoway/twoway.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ComponentinterComponent } from './componentinter/componentinter.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,15 @@ import { ComponentinterComponent } from './componentinter/componentinter.compone
     EventhandlingComponent,
     TwowayComponent,
     DirectivesComponent,
-    ComponentinterComponent
+    ComponentinterComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

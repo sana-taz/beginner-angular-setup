@@ -361,6 +361,9 @@
   <app-eventhandling></app-eventhandling>
   <app-twoway></app-twoway>
   <app-directives></app-directives>
+  {{message}}
+  <app-componentinter (child)="message=$event" [proData]='name'></app-componentinter>
+  <app-pipes></app-pipes>
   <!-- Resources -->
   <!--
 
