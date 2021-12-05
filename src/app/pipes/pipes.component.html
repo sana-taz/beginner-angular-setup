@@ -1,0 +1,10 @@
+<div style="justify-content: center;width: 100%;display: flex;font-size: large;">Pipes</div>
+<div>{{ name | lowercase }}</div>
+<div>{{ text | uppercase }}</div>
+<div>{{ heading | titlecase }}</div>
+<div> {{ slice | slice:3 }}</div>
+<div>{{ person | json }}</div>
+
+<div>{{ 5.68 | number:'3.3-3' }}</div>
+<ul *ngFor="let employee of employees">
+    <li>{{employee | json }}</li></ul>
