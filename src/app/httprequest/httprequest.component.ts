@@ -8,12 +8,14 @@ import { HttpService } from '../http.service';
 })
 export class HttprequestComponent implements OnInit {
   public users : object[] = []
+  public errorMsg : string = ''
 
   constructor(private _userservice: HttpService) { }
 
   ngOnInit(): void {
     this._userservice.getUsers()
-    .subscribe(data => this.users = data )
+    .subscribe(data => this.users = data,
+               error => this.errorMsg = error )
   }
 
 }

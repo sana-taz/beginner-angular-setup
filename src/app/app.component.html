@@ -352,7 +352,31 @@
  <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
   <div app-test ></div>
-  <app-architecture></app-architecture>
+  <nav>
+    <ul>
+      <li>
+        <a style="padding: 4px;" routerLink="/architecture">Architecture</a>
+
+      </li>
+      <li> <a style="padding: 4px;" routerLink="/biggnercomp">BignnerComponent</a></li>
+      <li><a style="padding: 4px;" routerLink="interpolation">Interpolation</a></li>
+      <li><a style="padding: 4px;" routerLink="/property">Property</a></li>
+      <li> <a style="padding: 4px;" routerLink="/classbinding">ClassBinding</a></li>
+      <li><a style="padding: 4px;" routerLink="/stylebinding">StyleBinding</a></li>
+      <li><a style="padding: 4px;" routerLink="/eventhandling">EventHandling</a></li>
+      <li><a style="padding: 4px;" routerLink="/twoway">Twoway</a></li>
+      <li><a style="padding: 4px;" routerLink="/directives">Directives</a></li>
+      <li> <a style="padding: 4px;" routerLink="/componentinter">ComponentInteraction</a></li>
+      {{message}}
+     <app-componentinter (child)="message=$event" [proData]='name'></app-componentinter>
+      <li><a style="padding: 4px;" routerLink="/pipes">Pipes</a></li>
+      <li><a style="padding: 4px;" routerLink="/httprequest">HttpRequest</a></li>
+
+
+    </ul>
+
+  </nav>
+  <!-- <app-architecture></app-architecture>
   <app-biggnercomp></app-biggnercomp>
   <app-interpolation></app-interpolation>
   <app-property></app-property>
@@ -360,11 +384,11 @@
   <app-stylebinding></app-stylebinding>
   <app-eventhandling></app-eventhandling>
   <app-twoway></app-twoway>
-  <app-directives></app-directives>
-  {{message}}
+  <app-directives></app-directives> -->
+  <!-- {{message}}
   <app-componentinter (child)="message=$event" [proData]='name'></app-componentinter>
   <app-pipes></app-pipes>
-  <app-httprequest></app-httprequest>
+  <app-httprequest></app-httprequest> -->
   <!-- Resources -->
   <!--
 

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule , routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { BiggnercompComponent } from './biggnercomp/biggnercomp.component';
@@ -35,7 +35,8 @@ import { HttprequestComponent } from './httprequest/httprequest.component'
     DirectivesComponent,
     ComponentinterComponent,
     PipesComponent,
-    HttprequestComponent
+    HttprequestComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
