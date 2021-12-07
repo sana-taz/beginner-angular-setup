@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
+import { ActivatedRoute ,Router , ParamMap } from '@angular/router'
 
 
 @Component({
@@ -18,15 +19,35 @@ export class PipesComponent implements OnInit {
     height: "5.3"
 
   }
-  public employees : object[] =  []
+  public employees : Array<any> =  [
+    {id:1,name:'ajax'},
+    {id:2,name:'ajax2'},
+    {id:3,name:'ajax3'},
+    {id:4,name:'ajax4'},
+  ]
+  public selectedId: any = ''
 
 
 
-  constructor(private _employeeService: EmployeeService) { }
+  constructor(private router: Router , private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this._employeeService.getEmployees()
-    .subscribe(data => this.employees = data)
+    // this._employeeService.getEmployees()
+    // .subscribe(data => this.employees = data)
+    this.route.paramMap.subscribe((params: ParamMap) =>
+    {
+      this.selectedId = parseInt(params.get('id') as any )
+    })
+  }
+  onSelect(employee: any){
+    // this.router.navigate(['/pipes',employee.id])
+    console.log(employee)
+
+    this.router.navigate([employee.id],{relativeTo: this.route})
+    console.log(this.router)
+  }
+  isSelected(employee: any){
+    return employee.id === this.selectedId
   }
 
 }

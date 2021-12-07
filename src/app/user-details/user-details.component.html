@@ -1,0 +1,9 @@
+<p>user-details works!</p>
+<p>{{ departmentId }}</p>
+<div style="flex-direction: row;display: flex;" >
+
+    <div style="padding: 4px;background-color: yellowgreen;margin: 4px;" (click)= 'goToOverview()'>overview</div> </div>
+    <router-outlet></router-outlet>
+    <div style="padding: 4px;background-color: blue;margin: 4px;" (click)= 'goPrevious()'>previous</div>
+    <div style="padding: 4px;background-color: yellowgreen;margin: 4px;" (click)= 'goNext()'>next</div>
+<div (click)= "gotoDepartments()">Back</div>

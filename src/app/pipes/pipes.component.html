@@ -6,5 +6,6 @@
 <div>{{ person | json }}</div>
 
 <div>{{ 5.68 | number:'3.3-3' }}</div>
-<ul *ngFor="let employee of employees">
+<ul class="items" *ngFor="let employee of employees">
+    <button (click)="onSelect(employee)" [class.selected] ="isSelected(employee)" style="padding: 4px;background-color: yellow;">{{ employee.id  }}</button>
     <li>{{employee | json }}</li></ul>
