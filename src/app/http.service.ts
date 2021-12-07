@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient , HttpErrorResponse } from '@angular/common/http';
 import { IUser } from './user';
-import { Observable, throwError } from 'rxjs';
+import { Observable , throwError as observableThrowError } from 'rxjs';
 import { catchError  } from 'rxjs/operators';
-// import 'rxjs/add/operator/map'
-// import 'rxjs/add/operator/catch';
-// import 'rxjs/add/observable/throw';
 
 @Injectable({
   providedIn: 'root'
@@ -15,18 +12,12 @@ export class HttpService {
 
   constructor(public http: HttpClient) { }
   getUsers(): Observable<IUser[]> {
-    return this.http.get<IUser[]>(this.url)
-    .pipe(
-      catchError((err) => {
-        console.log('error caught in service')
-        console.error(err);
-        return throwError(err);
-      })
+    return this.http.get<IUser[]>(this.url).pipe(
+      catchError(this.errorHandler)
     )
+  }
+  errorHandler(error: HttpErrorResponse ){
+ return observableThrowError(error.message || 'Server Error')
 
   }
-//   errorHandler(error: HttpErrorResponse ){
-//  return Observable.throw(error.message || 'Server Error')
-
-//   }
 }

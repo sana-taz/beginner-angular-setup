@@ -7,15 +7,21 @@ import { HttpService } from '../http.service';
   styleUrls: ['./httprequest.component.css']
 })
 export class HttprequestComponent implements OnInit {
-  public users : object[] = []
+  public users : Array<any> = []
   public errorMsg : string = ''
 
   constructor(private _userservice: HttpService) { }
 
   ngOnInit(): void {
-    this._userservice.getUsers()
-    .subscribe(data => this.users = data,
-               error => this.errorMsg = error )
+
+      this._userservice.getUsers().subscribe(data => this.users = data,
+       error => this.errorMsg = error)
+
+
+
+  }
+  onSelect(){
+
   }
 
 }
