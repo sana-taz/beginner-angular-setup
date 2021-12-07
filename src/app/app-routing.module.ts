@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DirectivesComponent } from './directives/directives.component';
+import { BiggnercompComponent } from './biggnercomp/biggnercomp.component';
 import { ArchitectureComponent } from './architecture/architecture.component';
 import { ClassbindingComponent } from './classbinding/classbinding.component';
 import { ComponentinterComponent } from './componentinter/componentinter.component';
@@ -12,20 +13,32 @@ import { PropertyComponent } from './property/property.component';
 import { StylebindingComponent } from './stylebinding/stylebinding.component';
 import { TestComponent } from './test/test.component';
 import { TwowayComponent } from './twoway/twoway.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { OverviewComponent } from './overview/overview.component';
 
 const routes: Routes = [
+  {path:"", redirectTo: '/architecture', pathMatch:'full'},
   {path:"architecture", component: ArchitectureComponent},
+  {path:"bignnercomp", component: BiggnercompComponent},
   {path:"directives", component: DirectivesComponent},
   {path:"classbinding", component: ClassbindingComponent},
   {path:"compnentinter", component: ComponentinterComponent},
   {path:"eventhandling", component: EventhandlingComponent},
   {path:"httprequest", component: HttprequestComponent},
+  {path:"pipes/:id", component: UserDetailsComponent,
+  children : [{
+    path:'overview' ,
+    component:OverviewComponent
+   }]
+  },
   {path:"interpolation", component: InterpolationComponent},
   {path: "pipes", component: PipesComponent},
   {path: "property",component: PropertyComponent},
   {path:"stylebinding",component: StylebindingComponent},
   {path:"test", component: TestComponent},
-  {path:"twoway", component: TwowayComponent}
+  {path:"twoway", component: TwowayComponent},
+  {path:"**", component: PageNotFoundComponent},
 
 
 ];
@@ -35,4 +48,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ArchitectureComponent,DirectivesComponent,ClassbindingComponent,ComponentinterComponent,EventhandlingComponent,HttprequestComponent,InterpolationComponent,PipesComponent,PropertyComponent,StylebindingComponent,TestComponent,TwowayComponent]
+export const routingComponents = [ArchitectureComponent,DirectivesComponent,ClassbindingComponent,ComponentinterComponent,EventhandlingComponent,HttprequestComponent,InterpolationComponent,PipesComponent,PropertyComponent,StylebindingComponent,TestComponent,TwowayComponent,PageNotFoundComponent,UserDetailsComponent]
