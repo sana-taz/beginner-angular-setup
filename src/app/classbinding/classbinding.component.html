@@ -1,7 +1,12 @@
-<div style="justify-content: center;width: 100%;display: flex;font-size: large;">Class Binding</div>
-<ul>
-    <li> Assign class to variable and calling that variable in one way binding - <span [class]="successClass">Classbinding works!</span></li>
-    <li>Assign the particular class with boolean expression - <span [class.text-danger]="hasError">Error message</span></li>
-    <li>Assign the ngClass with object  - <span [ngClass]="object">Error message</span></li>
-</ul>
+<div class="flex w-full h-screen justify-center items-center">
+<div class="flex flex-col justify-center items-center">
+    <div class="text-xl font-bold">Class Binding</div>
+    <ul class="flex flex-col w-full justify-center list-inside list-decimal my-2 mb-12">
+        <li> Assign class to variable and calling that variable in one way binding - <span [class]="successClass">Classbinding works!</span></li>
+        <li>Assign the particular class with boolean expression - <span [class.text-danger]="hasError">Error message</span></li>
+        <li>Assign the ngClass with object  - <span [ngClass]="object">Error message</span></li>
+    </ul>
+    <a class="bg-gray-200 p-2 m-2 hover:bg-blue-200 rounded" routerLink="/" >Go Back</a>
+    </div>
+</div>
 

@@ -16,9 +16,11 @@ import { TwowayComponent } from './twoway/twoway.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { OverviewComponent } from './overview/overview.component';
+import { RoutingComponent } from './routing/routing.component';
 
 const routes: Routes = [
-  {path:"", redirectTo: '/architecture', pathMatch:'full'},
+  {path:"", redirectTo: '/route', pathMatch:'full'},
+  {path:"route", component: RoutingComponent},
   {path:"architecture", component: ArchitectureComponent},
   {path:"bignnercomp", component: BiggnercompComponent},
   {path:"directives", component: DirectivesComponent},

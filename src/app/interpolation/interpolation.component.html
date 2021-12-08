@@ -1,8 +1,13 @@
-<div style="justify-content: center;width: 100%;display: flex;font-size: large;">Interpolation</div>
-<ul>
-    <li>{{name}}</li>
-    <li>{{operation}} - {{3+4}}</li>
-    <li>{{"string"  + concat}}</li>
-    <li>Cases in interpolation - {{name.toUpperCase()}}</li>
-    <li>Methods in interpolation - {{interpolation()}}</li>
-</ul>
+<div class="flex w-full justify-center h-screen items-center">
+<div class="flex flex-col items-start">
+    <div class="font-bold text-xl">Interpolation</div>
+    <ul class="flex flex-col w-full justify-center list-inside list-decimal my-2 mb-12">
+        <li>{{name}}</li>
+        <li>{{operation}} - {{3+4}}</li>
+        <li>{{"string"  + concat}}</li>
+        <li>Cases in interpolation - {{name.toUpperCase()}}</li>
+        <li>Methods in interpolation - {{interpolation()}}</li>
+    </ul>
+    <a class="bg-gray-200 p-2 m-2 hover:bg-blue-200 rounded" routerLink="/" >Go Back</a>
+</div>
+</div>

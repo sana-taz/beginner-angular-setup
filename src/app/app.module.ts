@@ -21,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttprequestComponent } from './httprequest/httprequest.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-import { OverviewComponent } from './overview/overview.component'
+import { OverviewComponent } from './overview/overview.component';
+import { RoutingComponent } from './routing/routing.component'
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { OverviewComponent } from './overview/overview.component'
     routingComponents,
     PageNotFoundComponent,
     UserDetailsComponent,
-    OverviewComponent
+    OverviewComponent,
+    RoutingComponent
   ],
   imports: [
     BrowserModule,

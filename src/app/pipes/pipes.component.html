@@ -1,11 +1,19 @@
-<div style="justify-content: center;width: 100%;display: flex;font-size: large;">Pipes</div>
-<div>{{ name | lowercase }}</div>
-<div>{{ text | uppercase }}</div>
-<div>{{ heading | titlecase }}</div>
-<div> {{ slice | slice:3 }}</div>
-<div>{{ person | json }}</div>
+<div class="flex w-full justify-center h-screen items-center">
+    <div class="flex flex-col items-start">
+        <div class="text-center text-xl font-bold">Pipes</div>
+        <div>{{ name | lowercase }}</div>
+        <div>{{ text | uppercase }}</div>
+        <div>{{ heading | titlecase }}</div>
+        <div> {{ slice | slice:3 }}</div>
+        <div>{{ person | json }}</div>
 
-<div>{{ 5.68 | number:'3.3-3' }}</div>
-<ul class="items" *ngFor="let employee of employees">
-    <button (click)="onSelect(employee)" [class.selected] ="isSelected(employee)" style="padding: 4px;background-color: yellow;">{{ employee.id  }}</button>
-    <li>{{employee | json }}</li></ul>
+        <div>{{ 5.68 | number:'3.3-3' }}</div>
+        <ul class="flex flex-col w-full justify-center list-inside list-decimal my-2 mb-12" *ngFor="let employee of employees">
+            <button (click)="onSelect(employee)" [class.selected] ="isSelected(employee)" style="padding: 4px;background-color: yellow;">{{ employee.id  }}</button>
+            <li>{{employee | json }}</li></ul>
+
+            <a class="bg-gray-200 p-2 m-2 hover:bg-blue-200 rounded" routerLink="/" >Go Back</a>
+    </div>
+
+
+</div>

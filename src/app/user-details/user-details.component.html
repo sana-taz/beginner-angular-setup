@@ -1,9 +1,14 @@
-<p>user-details works!</p>
-<p>{{ departmentId }}</p>
-<div style="flex-direction: row;display: flex;" >
+<div class="flex w-full justify-center h-screen items-center">
+    <div class="flex flex-col items-start">
+        <p>user-details works!</p>
+        <p>{{ departmentId }}</p>
+        <div style="flex-direction: row;display: flex;" >
 
-    <div style="padding: 4px;background-color: yellowgreen;margin: 4px;" (click)= 'goToOverview()'>overview</div> </div>
-    <router-outlet></router-outlet>
-    <div style="padding: 4px;background-color: blue;margin: 4px;" (click)= 'goPrevious()'>previous</div>
-    <div style="padding: 4px;background-color: yellowgreen;margin: 4px;" (click)= 'goNext()'>next</div>
-<div (click)= "gotoDepartments()">Back</div>
+            <div style="padding: 4px;background-color: yellowgreen;margin: 4px;" (click)= 'goToOverview()'>overview</div> </div>
+            <router-outlet></router-outlet>
+            <div style="padding: 4px;background-color: blue;margin: 4px;" (click)= 'goPrevious()'>previous</div>
+            <div style="padding: 4px;background-color: yellowgreen;margin: 4px;" (click)= 'goNext()'>next</div>
+        <div (click)= "gotoDepartments()">Back</div>
+        <a class="bg-gray-200 p-2 m-2 hover:bg-blue-200 rounded" routerLink="/" >Go Back</a>
+    </div>
+</div>
