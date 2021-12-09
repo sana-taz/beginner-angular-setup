@@ -17,11 +17,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { OverviewComponent } from './overview/overview.component';
 import { RoutingComponent } from './routing/routing.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   {path:"", redirectTo: '/route', pathMatch:'full'},
   {path:"route", component: RoutingComponent},
   {path:"architecture", component: ArchitectureComponent},
+  {path:"form", component: FormComponent},
   {path:"bignnercomp", component: BiggnercompComponent},
   {path:"directives", component: DirectivesComponent},
   {path:"classbinding", component: ClassbindingComponent},

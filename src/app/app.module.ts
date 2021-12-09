@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule , routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
@@ -22,7 +21,8 @@ import { HttprequestComponent } from './httprequest/httprequest.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { OverviewComponent } from './overview/overview.component';
-import { RoutingComponent } from './routing/routing.component'
+import { RoutingComponent } from './routing/routing.component';
+import { FormComponent } from './form/form.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { RoutingComponent } from './routing/routing.component'
     PageNotFoundComponent,
     UserDetailsComponent,
     OverviewComponent,
-    RoutingComponent
+    RoutingComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
