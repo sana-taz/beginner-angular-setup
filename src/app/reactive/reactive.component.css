@@ -1,0 +1,6 @@
+.is-invalid {
+    border-color: crimson;
+}
+.d-none{
+    display: none;
+}

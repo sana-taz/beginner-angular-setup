@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule , routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
@@ -23,11 +23,13 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { OverviewComponent } from './overview/overview.component';
 import { RoutingComponent } from './routing/routing.component';
 import { FormComponent } from './form/form.component'
-
+import { ReactiveComponent } from './reactive/reactive.component';
+import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
+    ReactiveComponent,
     BiggnercompComponent,
     ArchitectureComponent,
     InterpolationComponent,
@@ -45,12 +47,14 @@ import { FormComponent } from './form/form.component'
     UserDetailsComponent,
     OverviewComponent,
     RoutingComponent,
-    FormComponent
+    FormComponent,
+    FormbuilderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
   ],
   providers: [EmployeeService],

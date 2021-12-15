@@ -1,0 +1,225 @@
+<div class="flex flex-col w-full h-screen items-center justify-center">
+    <form [formGroup]="registrationForm" class="flex flex-col w-2/5 items-center bg-blue-200 rounded-lg m-4 p-4">
+    <div class="text-xl font-bold my-4">Reactive Form with Form Group & Form Control</div>
+    {{ registrationForm.value | json }}
+    <div class="flex flex-row w-full ml-12  justify-start form-group ">
+        <div class="flex w-2/5">
+            <div class="text-lg font-normal px-2 my-2">
+            First Name
+            </div>
+        </div>
+
+        <div class="flex w-3/5">
+            <div class="px-2  my-2">
+                <input formControlName="firstName" type="text" class="rounded flex bg-gray-200 border form-control shadow-xl p-2" placeholder="Enter First Name" name="firstname" />
+
+             </div>
+            </div>
+    </div>
+
+    <div class="flex flex-row ml-12 form-group w-full justify-start ">
+        <div class="flex w-2/5">
+            <div class="text-lg font-normal px-2 my-2">
+            Last Name
+            </div>
+        </div>
+        <div class="flex w-3/5">
+            <div class="px-2  my-2">
+                <input type="text"  formControlName="lastName"  name="lastName" class="rounded form-control flex bg-gray-200 border shadow-xl p-2" placeholder="Enter Last Name" />
+
+             </div>
+        </div>
+    </div>
+    <div class="flex flex-row ml-12 form-group w-full justify-start ">
+        <div class="flex w-2/5">
+            <div class="text-lg font-normal px-2  my-2">
+            Email
+        </div>
+        </div>
+        <div class="flex w-3/5">
+            <div class="px-2  my-2">
+                <input type="text" formControlName="email" class="form-control rounded flex bg-gray-200 border shadow-xl p-2" name="email" placeholder="Enter Email" />
+
+             </div>
+        </div>
+    </div>
+    <div class="flex flex-row ml-12  w-full form-group justify-start ">
+        <div class="flex w-2/5">
+        <div class="text-lg font-normal px-2  my-2">
+            Phone Number
+        </div>
+        </div>
+        <div class="flex w-3/5">
+            <div class="px-2  my-2">
+                <input type="text" formControlName="phone" class="rounded form-control flex bg-gray-200 border focus:outline-none shadow-xl p-2" name="phonenumber" placeholder="Enter Phone Number"/>
+
+
+             </div>
+        </div>
+    </div>
+    <div formGroupName="address" class="flex flex-col mr-12 w-full justify-start">
+        <div class="flex flex-row ml-12  w-full form-group justify-start ">
+            <div class="flex w-2/5">
+            <div class="text-lg font-normal px-2  my-2">
+                city
+            </div>
+            </div>
+            <div class="flex w-3/5">
+                <div class="px-2  my-2">
+                    <input type="text" formControlName="city" class="rounded form-control flex bg-gray-200 border focus:outline-none shadow-xl p-2" name="phonenumber" placeholder="Enter Phone Number"/>
+
+
+                 </div>
+            </div>
+        </div>
+        <div class="flex flex-row ml-12  w-full form-group justify-start ">
+            <div class="flex w-2/5">
+            <div class="text-lg font-normal px-2  my-2">
+                state
+            </div>
+            </div>
+            <div class="flex w-3/5">
+                <div class="px-2  my-2">
+                    <input type="text" formControlName="state" class="rounded form-control flex bg-gray-200 border focus:outline-none shadow-xl p-2" name="phonenumber" placeholder="Enter Phone Number"/>
+
+
+                 </div>
+            </div>
+        </div>
+        <div class="flex flex-row ml-12  w-full form-group justify-start ">
+            <div class="flex w-2/5">
+            <div class="text-lg font-normal px-2  my-2">
+                Country
+            </div>
+            </div>
+            <div class="flex w-3/5">
+                <div class="px-2  my-2">
+                    <input type="text" formControlName="country" class="rounded form-control flex bg-gray-200 border focus:outline-none shadow-xl p-2" name="phonenumber" placeholder="Enter Phone Number"/>
+
+
+                 </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="flex justify-center my-4">
+        <button type="submit" class="bg-blue-500 rounded p-2 m-2" >Submit</button>
+        <button (click)="loadApiData()" type="submit" class="bg-gray-500 rounded p-2 m-2" >Load Api data</button>
+        <button (click)="loadApiPatchData()" type="submit" class="bg-gray-500 rounded p-2 m-2" >Load Api data</button>
+    </div>
+
+    </form>
+    <!-- <form [formGroup]="builderForm" class="flex flex-col h-screen w-2/5 items-center bg-blue-200 rounded-lg m-4 p-4">
+        <div class="text-xl font-bold my-4">Reactive Form with Form Group & Form Control</div>
+        {{ builderForm.value | json }}
+        <div class="flex flex-row w-full ml-12  justify-start form-group ">
+            <div class="flex w-2/5">
+                <div class="text-lg font-normal px-2 my-2">
+                First Name
+                </div>
+            </div>
+
+            <div class="flex w-3/5">
+                <div class="px-2  my-2">
+                    <input [class.is-invalid]="builderForm && builderForm" formControlName="firstName" name="firstName" type="text" class="rounded flex bg-gray-200 border shadow-xl p-2"/>
+
+                 </div>
+                </div>
+        </div>
+
+        <div class="flex flex-row ml-12 form-group w-full justify-start ">
+            <div class="flex w-2/5">
+                <div class="text-lg font-normal px-2 my-2">
+                Last Name
+                </div>
+            </div>
+            <div class="flex w-3/5">
+                <div class="px-2  my-2">
+                    <input type="text"  formControlName="lastName"  name="lastName" class="rounded form-control flex bg-gray-200 border shadow-xl p-2" placeholder="Enter Last Name" />
+
+                 </div>
+            </div>
+        </div>
+        <div class="flex flex-row ml-12 form-group w-full justify-start ">
+            <div class="flex w-2/5">
+                <div class="text-lg font-normal px-2  my-2">
+                Email
+            </div>
+            </div>
+            <div class="flex w-3/5">
+                <div class="px-2  my-2">
+                    <input type="text" formControlName="email" class="form-control rounded flex bg-gray-200 border shadow-xl p-2" name="email" placeholder="Enter Email" />
+
+                 </div>
+            </div>
+        </div>
+        <div class="flex flex-row ml-12  w-full form-group justify-start ">
+            <div class="flex w-2/5">
+            <div class="text-lg font-normal px-2  my-2">
+                Phone Number
+            </div>
+            </div>
+            <div class="flex w-3/5">
+                <div class="px-2  my-2">
+                    <input type="text" formControlName="phone" class="rounded form-control flex bg-gray-200 border focus:outline-none shadow-xl p-2" name="phonenumber" placeholder="Enter Phone Number"/>
+
+
+                 </div>
+            </div>
+        </div>
+        <div formGroupName="address" class="flex flex-col mr-12 w-full justify-start">
+            <div class="flex flex-row ml-12  w-full form-group justify-start ">
+                <div class="flex w-2/5">
+                <div class="text-lg font-normal px-2  my-2">
+                    city
+                </div>
+                </div>
+                <div class="flex w-3/5">
+                    <div class="px-2  my-2">
+                        <input type="text" formControlName="city" class="rounded form-control flex bg-gray-200 border focus:outline-none shadow-xl p-2" name="phonenumber" placeholder="Enter Phone Number"/>
+
+
+                     </div>
+                </div>
+            </div>
+            <div class="flex flex-row ml-12  w-full form-group justify-start ">
+                <div class="flex w-2/5">
+                <div class="text-lg font-normal px-2  my-2">
+                    state
+                </div>
+                </div>
+                <div class="flex w-3/5">
+                    <div class="px-2  my-2">
+                        <input type="text" formControlName="state" class="rounded form-control flex bg-gray-200 border focus:outline-none shadow-xl p-2" name="phonenumber" placeholder="Enter Phone Number"/>
+
+
+                     </div>
+                </div>
+            </div>
+            <div class="flex flex-row ml-12  w-full form-group justify-start ">
+                <div class="flex w-2/5">
+                <div class="text-lg font-normal px-2  my-2">
+                    Country
+                </div>
+                </div>
+                <div class="flex w-3/5">
+                    <div class="px-2  my-2">
+                        <input type="text" formControlName="country" class="rounded form-control flex bg-gray-200 border focus:outline-none shadow-xl p-2" name="phonenumber" placeholder="Enter Phone Number"/>
+
+
+                     </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="flex justify-center my-4">
+            <button type="submit" class="bg-blue-500 rounded p-2 m-2" >Submit</button>
+        </div>
+
+        </form> -->
+    <a class="bg-gray-200 p-2 m-2 hover:bg-blue-200 rounded"  routerLink="/" >Go Back</a>
+    </div>

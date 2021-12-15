@@ -9,7 +9,7 @@ export class TwowayComponent implements OnInit {
 
 
   constructor() { }
-  text = ''
+  text2 = ''
   ngOnInit(): void {
   }
 
