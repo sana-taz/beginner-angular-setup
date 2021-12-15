@@ -25,6 +25,9 @@ import { RoutingComponent } from './routing/routing.component';
 import { FormComponent } from './form/form.component'
 import { ReactiveComponent } from './reactive/reactive.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +59,8 @@ import { FormbuilderComponent } from './formbuilder/formbuilder.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSliderModule,
+    BrowserAnimationsModule,
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
