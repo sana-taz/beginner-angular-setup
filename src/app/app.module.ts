@@ -27,6 +27,12 @@ import { ReactiveComponent } from './reactive/reactive.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -45,6 +51,7 @@ import { MatSliderModule } from '@angular/material/slider';
     ComponentinterComponent,
     PipesComponent,
     HttprequestComponent,
+
     routingComponents,
     PageNotFoundComponent,
     UserDetailsComponent,
@@ -57,9 +64,15 @@ import { MatSliderModule } from '@angular/material/slider';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatSidenavModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatSliderModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule,
     BrowserAnimationsModule,
   ],
   providers: [EmployeeService],
