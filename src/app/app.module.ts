@@ -32,6 +32,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { AdminModule } from './admin/admin.module';
 import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
@@ -74,6 +75,7 @@ import { MatButtonModule } from '@angular/material/button'
     MatToolbarModule,
     MatListModule,
     BrowserAnimationsModule,
+    AdminModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

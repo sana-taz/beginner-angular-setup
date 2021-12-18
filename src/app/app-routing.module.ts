@@ -22,7 +22,7 @@ import { ReactiveComponent } from './reactive/reactive.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 
 const routes: Routes = [
-  {path:"", redirectTo: '/route', pathMatch:'full'},
+  {path:"", redirectTo: '/home', pathMatch:'full'},
   {path:"route", component: RoutingComponent},
   {path:"reactiveform", component: ReactiveComponent},
   {path:"formbuilder", component: FormbuilderComponent},
@@ -46,7 +46,7 @@ const routes: Routes = [
   {path:"stylebinding",component: StylebindingComponent},
   {path:"test", component: TestComponent},
   {path:"twoway", component: TwowayComponent},
-  {path:"**", component: PageNotFoundComponent},
+  // {path:"**", component: PageNotFoundComponent},
 
 
 ];
